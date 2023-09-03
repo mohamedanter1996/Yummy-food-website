@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="imgs/favicon/logo.png" type="image/x-icon">
+      <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link rel="stylesheet" href="font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-window">
+    <div class="loading position-fixed  top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center bg-black"><i class="fa-solid fa-spinner fa-spin fa-2xl text-white"></i></div>
+    <nav class="position-fixed top-0 bottom-0    z-3 d-flex">
+<div class="nav-data d-flex flex-column h-100 justify-content-between  bg-window">
+    <div class="nav-links mt-4">
+        <ul class="px-4">
+            <li class="list-unstyled my-2 Search animate__animated animate__fast"><a href="" class="text-decoration-none text-white">Search</a></li>
+            <li class="list-unstyled my-2 Categories animate__animated animate__fast"><a href="" class="text-decoration-none text-white">Categories</a></li>
+            <li class="list-unstyled my-2 Area animate__animated animate__fast"><a href="" class="text-decoration-none text-white">Area</a></li>
+            <li class="list-unstyled my-2 Ingredients animate__animated animate__fast"><a href="" class="text-decoration-none text-white">Ingredients</a></li>
+            <li class="list-unstyled my-2 Contact animate__animated animate__fast"><a href="" class="text-decoration-none text-white">Contact Us</a></li>
+        </ul>
+    </div>
+<div class="media-links-copy-writes text-white px-4 mb-4">
+    <div class="media-links d-flex  gap-1">
+        <div class="media-link"><i class="fa-brands fa-facebook"></i></div>
+        <div class="media-link"><i class="fa-brands fa-twitter"></i></div>
+        <div class="media-link"><i class="fa-solid fa-globe"></i></div>
+    </div>
+    <p class="d-inline">Copyright Â© 2019 All Rights <br> Reserved.</p>
+</div>
+</div>
+<div class="nav-setting  bg-white w-10 d-flex flex-column justify-content-between align-items-center">
+    <div class="nav-img  pt-4  ms-12-5">
+        <img src="imgs/favicon/logo.png" class="w-75" alt="">
+    </div>
+    <div class="nav-open-close">
+        <div class="nav-open"><i class="fa-solid open-close-icon fa-2x fa-align-justify"></i></div>
+        <div class="nav-close d-none"><i class="fa-solid fa-xmark fa-2x"></i></div>
+    </div>
+
+    <div class="global-links pb-4">
+<div><i class="fa-solid fa-globe d-block"></i></div>
+<div><i class="fa-solid fa-share-nodes"></i></div>
+    </div>
+</div>
+    </nav>
+<header id="home" class="home d-block mt-5">
+    <div class="container home-data">
+        <div class="row gy-4 all-items">
+            
+        </div>
+        <div class="clicked-item d-none row">
+            <div class="col-md-4">
+                <div class="clicked-item-img-name">
+                    <img  src="https://www.themealdb.com/images/media/meals/58oia61564916529.jpg" id="clickedItemImg" class="w-100 rounded-2" alt="">
+                    <h2 id="clickedItemName" class="text-white">Corba</h2>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+            <div class="clicked-item-all-data text-white">
+                <h2>Instructions</h2>
+                <p id="clickedItemInstructions">Pick through your lentils for any foreign debris, rinse them 2 or 3 times, drain, and set aside. Fair warning, this will probably turn your lentils into a solid block that you’ll have to break up later In a large pot over medium-high heat, sauté the olive oil and the onion with a pinch of salt for about 3 minutes, then add the carrots and cook for another 3 minutes. Add the tomato paste and stir it around for around 1 minute. Now add the cumin, paprika, mint, thyme, black pepper, and red pepper as quickly as you can and stir for 10 seconds to bloom the spices. Congratulate yourself on how amazing your house now smells. Immediately add the lentils, water, broth, and salt. Bring the soup to a (gentle) boil. After it has come to a boil, reduce heat to medium-low, cover the pot halfway, and cook for 15-20 minutes or until the lentils have fallen apart and the carrots are completely cooked. After the soup has cooked and the lentils are tender, blend the soup either in a blender or simply use a hand blender to reach the consistency you desire. Taste for seasoning and add more salt if necessary. Serve with crushed-up crackers, torn up bread, or something else to add some extra thickness. You could also use a traditional thickener (like cornstarch or flour), but I prefer to add crackers for some texture and saltiness. Makes great leftovers, stays good in the fridge for about a week.</p>
+                <h3><span>Area :</span><span id="area">Turkish</span></h3>
+                <h3><span>Category :</span><span id="category"> Side</span></h3>
+                <h3>Recipes :</h3>
+                <ul id="recipes" class="list-unstyled d-flex flex-wrap">
+                    
+                </ul>
+                <h3>Tags :</h3>
+                <ul id="tags" class="list-unstyled d-flex flex-wrap">
+                    
+                </ul>
+               <a href="" id="source" class="text-decoration-none text-white btn btn-success" target="_blank">Source</a>
+
+                <a href="" id="youtube" class="text-decoration-none text-white btn btn-danger" target="_blank">Youtube</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="search" class="search-page d-none">
+    <div class="search-page-data container">
+        <div class="inputs d-flex justify-content-center mt-3 gap-4">
+             <div class="w-50 ps-5">
+            <input type="text" class="form-control" id="nameValue" placeholder="Search By Name">
+        </div>
+
+          <div class="w-50 pe-5">
+            <input type="text" class="form-control" id="firstLetterValue" placeholder="Search By First Letter">
+        </div>
+
+        </div>
+       <div class="searched-items-data row gy-4 mt-3">
+        
+       </div>
+    </div>
+</section>
+
+<section id="categories" class="categories-page d-none">
+    <div class="categories-page-data container">
+<div class="row category-items my-5 gy-4">
+
+</div>
+<div class="meals-category-list row my-5 gy-4 d-none">
+
+</div>
+    </div>
+</section>
+
+<section id="area" class="area-page d-none">
+    <div class="area-page-data container">
+        <div class="row area-items my-5 gy-4">
+            
+
+</div>
+<div class="meals-area-list row my-5 gy-4 d-none">
+
+</div>
+    </div>
+</section>
+
+
+<section id="ingredients" class="ingredients-page d-none">
+    <div class="ingredients-page-data container">
+        <div class="row ingredients-items my-5 gy-4">
+            
+
+</div>
+<div class="meals-ingredients-list row my-5 gy-4 d-none">
+
+</div>
+    </div>
+</section>
+
+<section id="contact" class="contact-page d-none">
+    <div class="container contact-data">
+        <div class="row contact-data-details py-5">
+            <div class="contact-data-details-scope  min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="contact-data-details-scope-inputs container w-75 text-center ">
+                 <div class="row g-4">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Enter Your Name" name="userName" id="userName">
+                    <p class="alert alert-danger d-none mt-2" id="nameAlert">Special characters and numbers not allowed</p>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" placeholder="Enter Your Email" name="userEmail" id="userEmail">
+                    <p class="alert alert-danger d-none mt-2" id="emailAlert">Email not valid *exemple@yyy.zzz</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control" placeholder="Enter Your Phone" name="userPhone" id="userPhone">
+                    <p class="alert alert-danger d-none mt-2" id="phoneAlert">Enter valid Phone Number</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" placeholder="Enter Your Age" name="userAge" id="userAge">
+                    <p class="alert alert-danger d-none mt-2" id="ageAlert">Enter valid age</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="password" class="form-control" placeholder="Enter Your Password" name="userPassword" id="userPassword">
+                    <p class="alert alert-danger d-none mt-2" id="passwordAlert">Enter valid password *Minimum eight characters, at least one letter and one number:*</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="password" class="form-control" placeholder="Repassword" name="userRepassword" id="userRepassword">
+                    <p class="alert alert-danger d-none mt-2" id="repasswordAlert">Enter valid repassword</p>
+                  </div>
+                  <button class="btn btn-outline-danger w-auto mx-auto" disabled type="button">Submit</button>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script> 
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/main.js" type="module"></script>
+</body>
+</html>
